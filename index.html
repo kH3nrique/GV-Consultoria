@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport", content="width=device-width, initial-scale=1.0">
+    <title>GV Consultoria e Assessoria</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body id="home">
+    <div class="navigation">
+        <img src="gv.png">
+            <ul>
+                <li class="list active">
+                    <a href="#home">
+                        <span class="icon">
+                            <i class='bx bx-home-alt-2'></i>
+                        </span>
+                        <span class="text">Home</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#about">
+                        <span class="icon">
+                            <i class='bx bx-message-error'></i>
+                        </span>
+                        <span class="text">Sobre</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#services">
+                        <span class="icon">
+                            <i class='bx bx-briefcase-alt'></i>
+                        </span>
+                        <span class="text">Serviços</span>  
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#contact">
+                        <span class="icon">
+                            <i class='bx bx-message'></i>
+                        </span> 
+                        <span class="text">Contato</span> 
+                    </a>
+                </li>
+                <div class="indicator"></div>
+            </ul>
+    </div>
+
+    <script>
+        const list = document.querySelectorAll('.list');
+        function activeLink() {
+            list.forEach((item) =>
+            item.classList.remove('active'));
+            this.classList.add('active');
+        }
+        list.forEach((item)=>
+        item.addEventListener('click', activeLink));
+    </script>
+    
+    <main>
+        <section class="center-lize">
+            <h2>Bem-vindo a GV Consultoria e Assessoria</h2>
+            <p>A melhor solução em trânsito e mobilidade.</p>
+        </section>
+        <div class="image">
+            <img src="img1.jpg">
+        </div>
+        <section id="about">
+            <h2 style="text-align: center;" >Sobre nós</h2>
+            <p>A GV Consultoria foi criada e concebida no sentido de fornecer a municípios e empresas privadas uma 
+                gama de produtos relacionados a Trânsito e Transportes, a um custo acessível de mercado. Procuramos 
+                aprimorar o desenvolvimento de diferentes soluções relacionadas a Trânsito, Transporte e Mobilidade 
+                Urbana, com o respaldo profissional e pela assistência técnica especializada oferecida nas ações e 
+                serviços realizados. Entre os diferentes serviços oferecidos estão a inserção do município no Sistema 
+                Nacional de Transito -SNT, estudo e viabilidade e implantação do Estacionamento Rotativo, capacitações
+                sobre o trabalho das Juntas Administrativas de Recursos de Infrações – JARI, consultorias sobre legislação 
+                de Trânsito e Transporte, entre diversas outras ações. Alguns dos diferenciais GV é a experiência adquirida 
+                ao longo dos anos e o nível de excelência da rede de colaboradores mantida pela empresa, com especialistas 
+                em Trânsito, Professores e pesquisadores de todo o país que comandam os cursos e trocam experiências com os 
+                clientes e alunos nas ações organizadas pela GV. As crescentes tendências de busca por qualificação dos 
+                serviços públicos e pelo estrito cumprimento dos aspectos legais que envolvem o Trânsito nas cidades reforçam 
+                ainda mais a importância dos serviços oferecidos pela GV, tanto do ponto de vista do profissional que evolui 
+                com as lições dos cursos e assessorias, quanto do contribuinte, que passa a contar com serviços mais 
+                qualificados dos profissionais e órgãos de Trânsito nos municípios. </p>
+        </section>
+        <section id="services">
+            <h2>Nossos Serviços</h2>
+            <div class="list">
+                <ul>
+                    <li>
+                        <p>ASSESSORIA PARA A MUNICIPALIZAÇÃO DO TRÂNSITO</p>
+                        <p><ion-icon name="refresh-outline"></ion-icon>ESTUDO DE VIABILIDADE DE IMPLANTAÇÃO DE ESTACIONAMENTO ROTATIVO.</p>
+                        <p>PLANO DE AÇÃO IMEDIATA DE TRANSITO E TRÁFEGO – PAITT</p>
+                    </li>
+                </ul>
+            </div>
+            
+        </section>
+        <div id="contact">
+            <form action="" method="post">
+                <h1>Preencha o Formulário e entraremos em contato com você em breve!</h1>
+                <div class="input-box">
+                    <input name="name" type="text" placeholder="Seu nome" required>
+                    <span class="icon"></span><i class='bx bx-user'></i>
+                </div>
+                <div class="input-box">
+                    <input name="city" type="text" placeholder="Cidade" required>
+                    <span class="icon"></span><i class='bx bx-buildings'></i>
+                </div>
+                <div class="input-box">
+                    <input name="email" type="email" placeholder="E-Mail" required>
+                    <span class="icon"></span><i class='bx bx-envelope' ></i>
+                </div>
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 GV Consultoria e Assessoria. Todos os direitos reservados.</p>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
