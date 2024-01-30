@@ -15,7 +15,7 @@ html {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: roboto;
     line-height: 1.6;
     justify-content: center;
     align-items: center;
@@ -51,7 +51,7 @@ body {
 .navigation ul {
     display: flex;
     width: 350px;
-    gap: 10rem;
+    gap: 7.5rem;
 }
 
 .navigation ul li{
@@ -72,7 +72,6 @@ body {
     width: 100%;
     text-align: center;
     font-weight: 500;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .navigation ul li a .icon{
@@ -107,18 +106,17 @@ body {
 
 section {
     min-height: 100vh;
-    padding-top: 8rem;
 }
 
 .center-lize {
-    background-position: center;
+    padding-top: 8rem;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #000000;
     text-align: center;
+    background-position: center;
 }
 
 .center-lize h2 {
@@ -142,15 +140,17 @@ section {
     margin-bottom: 3rem;
     max-width: 100%;
     height: auto;
-    border-radius: 8px; /* Bordas arredondadas */
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Sombra ao redor da imagem */
-    transition: 0.3s; /* Animação suave */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
 }
 
 .image img:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); /* Sombra maior quando o mouse passa por cima */
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
+
 #about {
+    padding-top: 8rem;
     min-height: 100vh;
     text-align: center;
     color: #000000;
@@ -158,7 +158,7 @@ section {
 }
 
 #about h2 {
-    font-size: 2rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
 }
 
@@ -166,29 +166,76 @@ section {
     font-size: 1.2rem;
     margin-bottom: 2rem;
     padding: 0px 55px;
+    text-align: justify;
 }
 
 #services {
+    padding-top: 8rem;
     text-align: center;
     color: #000000;
 }
 
 #services h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.list ul li {
-    list-style: none;
-    display: flex;
-    padding: 20px;
+    font-size: 3rem;
+    margin-bottom: 5rem;
 }
 
 .list {
+    /* display: flex; */
     justify-content: space-around;
+    padding: 0px 55px;
+}
+
+.listDiv {
+    padding-top: 5rem;
+}
+
+.listDiv span{
+    font-size: 1.5rem;
+}
+
+.list .imgMunic {
+    width: 400px;
+    margin-bottom: 3rem;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.list .imgMunic:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.list .imgRotat {
+    width: 300px;
+}
+
+.list .imgEst {
+    width: 500px;
+}
+
+.list .imgPaitt{
+    width: 350px;
+}
+
+.list .imgPaitt2{
+    width: 321.2px;
+}
+
+.aboutS{
+    text-align: justify;
+}
+
+.service {
+    flex: 1;
+    text-align: center;
+    font-weight: bold;   
 }
 
 #contact{
+    margin-top: 5rem;
+    padding-top: 8rem;
     background: #778bfa;
     color: #ffffff;
     border-radius: 10px;

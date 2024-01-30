@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <title>Enviar Email</title>
+</head>
+<body>
+
+<form id="meuFormulario">
+  <label for="nome">Nome:</label>
+  <input type="text" id="nome" name="nome" required>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="cidade">Cidade:</label>
+  <input type="text" id="cidade" name="cidade" required>
+
+  <button type="button" onclick="enviarEmail()">Enviar Email</button>
+</form>
+
+<script>
+  function enviarEmail() {
+    const nome = document.getElementById('nome').value;
+    const emailDestinatario = document.getElementById('email').value;
+    const cidade = document.getElementById('cidade').value;
+
+    const corpoEmail = `Olá,\n\nNome: ${nome}\nEmail: ${emailDestinatario}\nCidade: ${cidade}\n\nMensagem adicional...`;
+
+    Email.send({
+      SecureToken: "25301a22-7099-406b-ae58-b2f511db7e64",
+      To: 'henriqueafs07@gmail.com', // Substitua pelo seu próprio email ou mantenha como está
+      From: 'seu_email@gmail.com',
+      Subject: 'Assunto do Email',
+      Body: corpoEmail
+    }).then(
+      message => alert(message)
+    );
+  }
+</script>
+
+</body>
+</html>
