@@ -8,6 +8,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script defer src="index.js"></script>
 </head>
 <body id="home">
     <div class="navigation">
@@ -75,7 +76,7 @@
             
         </section>
         <div class="image">
-            <img src="img/img1.jpg">
+            <img src="img/gv.png">
         </div>
         <section id="about">
             <h2 style="text-align: center; font-family: 'Roboto', sans-serif;" >Sobre nós</h2>
@@ -146,7 +147,7 @@
             </div>
         </section>     
         <div id="contact">
-            <form action="" method="post">
+            <form data-form action="https://formsubmit.co/ajax/912457e5b8771bb20484161acf383f56" method="POST" onsubmit="enviarEmail(event)">
                 <h1 style="font-family: 'Roboto', sans-serif;">Preencha o Formulário e entraremos em contato com você em breve!</h1>
                 <div class="input-box">
                     <input name="name" id="nome" type="text" placeholder="Seu nome" required>
@@ -160,31 +161,12 @@
                     <input name="email" id="email" type="email" placeholder="E-Mail" required>
                     <span class="icon"></span><i class='bx bx-envelope' ></i>
                 </div>
-                <button type="submit" class="btn" onclick="enviarEmail()">Enviar</button>
+                <button type="submit" class="btn" data-button>Enviar</button>
             </form>
         </div>
     </main>
     <footer>
         <p>&copy; 2023 GV Consultoria e Assessoria. Todos os direitos reservados.</p>
     </footer>
-    <script>
-        function enviarEmail() {
-          const nome = document.getElementById('nome').value;
-          const emailDestinatario = document.getElementById('email').value;
-          const cidade = document.getElementById('cidade').value;
-      
-          const corpoEmail = `Olá,\n\nNome: ${nome}\nEmail: ${emailDestinatario}\nCidade: ${cidade}\n\nMensagem adicional...`;
-      
-          Email.send({
-            SecureToken: "sua_chave_aqui",
-            To: 'seu_email@email.com', // Substitua pelo seu próprio email ou mantenha como está
-            From: 'seu_email@gmail.com',
-            Subject: 'Assunto do Email',
-            Body: corpoEmail
-          }).then(
-            message => alert(message)
-          );
-        }
-    </script>
 </body>
 </html>
